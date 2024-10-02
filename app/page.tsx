@@ -20,9 +20,9 @@ export default function Component() {
   const [callDuration, setCallDuration] = useState(0);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
     if (isCallActive) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         setCallDuration((prev) => prev + 1);
       }, 1000);
     }
